@@ -73,12 +73,12 @@ metadata {
 			title: "Advanced Configuration", type: "paragraph", element: "paragraph"
 
 		input "motionDelayTime", "enum", title: "Motion Sensor Delay Time",
-			options: ["20 seconds", "40 seconds", "1 minute", "2 minutes", "3 minutes", "4 minutes"]
+			options: ["5 seconds", "20 seconds", "40 seconds", "1 minute", "2 minutes", "3 minutes", "4 minutes"]
 
 		input "motionSensitivity", "enum", title: "Motion Sensor Sensitivity", options: ["maximum", "normal", "minimum", "disabled"]
 
 		input "reportInterval", "enum", title: "Sensors Report Interval",
-			options: ["8 minutes", "15 minutes", "30 minutes", "1 hour", "6 hours", "12 hours", "18 hours", "24 hours"]
+			options: ["5 seconds", "8 minutes", "15 minutes", "30 minutes", "1 hour", "6 hours", "12 hours", "18 hours", "24 hours"]
 	}
 
 	tiles(scale: 2) {
@@ -451,7 +451,8 @@ def configure() {
 
 private def getTimeOptionValueMap() {
 	[
-		"20 seconds": 20,
+		"5 seconds": 5,
+        "20 seconds": 20,
 		"40 seconds": 40,
 		"1 minute"  : 60,
 		"2 minutes" : 2 * 60,
